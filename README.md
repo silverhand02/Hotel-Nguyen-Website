@@ -30,17 +30,7 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 - JQuery
 - MySQL
 ## Demo
-![Database](readme-images/Database.png)
-![Browse](readme-images/Browse.png)
-![Details](readme-images/Details.png)
-![MenuManagement](readme-images/MenuManagement.png)
-![NewsManagement](readme-images/NewsManagement.png)
-![ProductCateManagement](readme-images/ProductCateManagement.png)
-![AccountManagement](readme-images/AccountManagement.png)
-![Payment](readme-images/Payment.png)
-![Login](readme-images/Login.png)
-![Receipt](readme-images/Receipt.png)
-![AdminReceiptDetail](readme-images/AdminReceiptDetail.png)
+![Demo](52000579_DuongDucNguyen.mp4)
 
 ## Contributors
 - Duong Duc Nguyen - Back-end Developer - https://github.com/silverhand02
