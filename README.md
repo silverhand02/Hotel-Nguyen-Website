@@ -1,6 +1,6 @@
-# Furniture Store Website
+# Hotel Nguyen Website
 
-![Furniture Store Website](readme-images/Description.png)
+![Hotel Nguyen Website](readme-images/Description.png)
 
 This is a project for creating a Furniture Store Website. The website aims to provide users with a convenient platform to browse and purchase furniture items online.
 
@@ -20,9 +20,8 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 - Admin dashboard for managing products and orders
 
 ## Technologies Used
-- C#
-- ASP.NET Core MVC
-- Entity Framework Core
+- Java
+- Spring Boot
 - HTML5
 - CSS3
 - JavaScript
@@ -33,9 +32,8 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 ![Demo](52000579_DuongDucNguyen.mp4)
 
 ## Contributors
-- Duong Duc Nguyen - Back-end Developer - https://github.com/silverhand02
-- Tran Quang Minh - Back-end Developer
-- Nguyen Thanh Loc - Front-end Developer - https://github.com/ngthloc1803
-
+- Duong Duc Nguyen - Full Stacks Developer - https://github.com/silverhand02
+- Tran Quang Minh - Full Stacks Developer
+- Nguyen Gia Nguyen - Full Stacks Developer
 
 
