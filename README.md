@@ -34,7 +34,8 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 - JQuery
 - MySQL
 ## Demo
-![Demo](Duongducnguyen.mp4)
+File Size: 118 MB
+https://drive.google.com/file/d/1QBb84Pc1kmzowkXykQmwmwEbOnbrUgTY/view?usp=drive_link
 
 ## Contributors
 - Nguyen Gia Nguyen - Back-end Developer
