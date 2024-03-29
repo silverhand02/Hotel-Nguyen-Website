@@ -2,7 +2,7 @@
 
 ![Hotel Nguyen Website](readme-images/Description.png)
 
-This is a project for creating a Furniture Store Website. The website aims to provide users with a convenient platform to browse and purchase furniture items online.
+This is a project for creating a Hotel Nguyen Website. The website aims to provide users with a convenient platform to browse and book hotel rooms online.
 
 ## Table of Contents
 - [Features](#features)
