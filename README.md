@@ -37,9 +37,9 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 ![Demo](52000579_DuongDucNguyen.mp4)
 
 ## Contributors
-- Duong Duc Nguyen - Back-end Developer - https://github.com/silverhand02
-- Tran Truong Gia Phat - Full Stacks Developer
 - Nguyen Gia Nguyen - Back-end Developer
+- Tran Truong Gia Phat - Full Stacks Developer
+- Duong Duc Nguyen - Back-end Developer - https://github.com/silverhand02
 - Nguyen Khac Van - Front-end Developer
 - Nguyen Tien Huy - Front-end Developer
 
