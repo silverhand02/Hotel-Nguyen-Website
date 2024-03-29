@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Trang chủ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900">
+<link
+	href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/7b78e77d77.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" th:href="@{~/assets/css/style.css}">
+<link rel="stylesheet" th:href="@{~/assets/css/responsive.css}">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm nav_bar_content">
+		<div class="content_logo">
+			<a id="logo_nav" href="#"><img src="./assets/img/Logo.png"></a>
+			<h4>
+				<a th:href="@{#}">Trang chủ</a>
+			</h4>
+		</div>
+
+		<div id="nav-links" class="nav-links">
+			<i class="fa fa-times hide_icon" onclick="hideMenu()"></i>
+			
+            
+
+			<ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link" th:href="@{#}">
+					<h4>Xin chào, Admin</h4>    
+				  </a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" th:href="@{/logout}">
+					  <h4>Đăng xuất</h4> 
+				  </a>
+				</li>
+			  </ul>
+
+		</div>
+		<i class="fa fa-bars hide_icon" onclick="showMenu()"></i>
+	</nav>
+
+	<div class="container-fluid bg_admin">
+		
+		<h1 class="title_container no_top">Danh sách các phòng</h1>
+
+			<table class="user_table" >
+				<tr>
+				  <th>ID</th>
+				  <th>Trạng thái</th>
+				  <th>Số phòng</th>
+				  <th>Lầu</th>
+				  <th>Loại phòng</th>
+				  <th>Giá phòng</th>
+				  <th>Mô tả</th>
+				</tr>
+				<tr th:each="room :${roomList}">
+				  <td th:text="${room.room_id}"></td>
+				  <td th:text="${room.status_id}"></td>
+				  <td th:text="${room.roomnumber}"></td>
+				  <td th:text="${room.location_floor}"></td>
+				  <td th:text="${room.room_type}"></td>
+				  <td th:text="${room.price}"></td>
+				  <td th:text="${room.description}"></td>			  
+				</tr>
+
+			  </table>
+			  <a th:href="@{/admin_userList}" class="see_room_list btn btn-primary">Xem danh sách nguời dùng</a>
+
+	</div>
+
+
+
+	<div class="copyright">
+		<h3>© Bản quyền thuộc về nhóm Nguyen22</h3>
+	</div>
+
+
+
+
+</body>
+
+</html>
+

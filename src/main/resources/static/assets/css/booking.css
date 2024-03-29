@@ -1,0 +1,92 @@
+body{
+	background-color: rgb(186, 250, 207);
+}
+a{
+	text-decoration: none;
+}
+.booking-form {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+td{
+	font-size: 1.25em;
+	font-family: 'Nanum Gothic';
+	padding: 10px;
+	border-radius:12px;
+}
+input{
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+#booking-submit {
+  background: rgb(0, 128, 128);
+  padding: 20px;
+  border: none;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Nanum Gothic';
+}
+#booking-submit:hover {
+  background: rgb(0, 128, 64);
+}
+#back-button{
+	background: rgb(0, 128, 128);
+  padding: 20px;
+  border: none;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Nanum Gothic';
+}
+#back-button:hover{
+	background: rgb(0, 128, 64);
+}
+table{
+	border: 1px solid green;
+	border-radius: 25px;
+	border-width: medium;
+	background: rgb(236, 252, 241);
+	padding: 30px;
+}
+h1{
+	font-size: 2.25em;
+	font-family: 'Arial';
+	padding:10px;
+}
+.table-heading{
+	 text-align: center; 
+    vertical-align: middle;
+}
+
+.receipt{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.btn_back{
+	margin-left:10%;
+	font-size:24px;
+}
+#momo-confirm {
+  background: rgb(0, 128, 128);
+  padding: 20px;
+  border: none;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Nanum Gothic';
+}
+#momo-confirm:hover {
+  background: rgb(0, 128, 64);
+}

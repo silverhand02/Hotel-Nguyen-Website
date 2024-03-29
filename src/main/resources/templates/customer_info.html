@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" th:href="@{~/assets/css/style.css}">
+<link rel="stylesheet" th:href="@{~/assets/css/responsive.css}">
+    <title>Trang thông tin khách hàng</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm nav_bar_content">
+		<div class="content_logo">
+			<a id="logo_nav" th:href="@{/home}"><img src="./assets/img/Logo.png"></a>
+			<h4>
+				<a th:href="@{/home}">Trang chủ</a>
+			</h4>
+		</div>
+
+		<div id="nav-links" class="nav-links">
+			<i class="fa fa-times hide_icon" onclick="hideMenu()"></i>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/home#about}">
+						<h4>Giới thiệu</h4>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/home#contact}">
+						<h4>Liên lạc</h4>
+				</a></li>
+				<li class="nav-item"><a class="nav-link"th:href="@{/home#review}">
+						<h4>Đánh giá</h4>
+				</a></li>
+			</ul>
+	
+	
+			<div class="dropdown">
+
+                <h4 onclick="myFunction()" class="dropbtn" th:text="${nameOfUser}">Xin chào, User</h4>
+                <div id="myDropdown" class="dropdown-content">
+                  <a th:href="@{/changePass}"><h5>Đổi mật khẩu</h5></a>
+                  <a th:href="@{/logout}"><h5>Đăng Xuất</h5></a>
+                </div>
+              </div>
+		</div>
+    <i class="fa fa-bars hide_icon" onclick="showMenu()"></i>
+  </nav>
+  
+    <div class="container">
+    <div class="title_container">
+        <h1>Thông tin khách hàng</h1>
+    </div>
+    <div class="content_container_register">
+        <div class="form_customer_info">
+            <h3>Thông tin khách hàng</h3>
+            <form onsubmit="return false;">
+                <div class="form-group">
+                  <label for="username">Tài khoản:</label>
+                  <input type="text" class="form-control" placeholder="Nhập tài khoản" name="username1" th:value="${userInfo.username}"  disabled>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Họ và tên:</label>
+                    <input type="text" class="form-control" placeholder="Nhập họ và tên của bạn" name="fullName1" th:value="${userInfo.fullName}"  disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Ngày tháng năm sinh :</label>
+                    <input type="date" class="form-control" name="birthday1" th:value="${userInfo.birthday}" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" placeholder="Nhập email" name="email1" th:value="${userInfo.email}" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Địa chỉ:</label>
+                    <input type="text" class="form-control" placeholder="Nhập địa chỉ " name="address1" th:value="${userInfo.address}" disabled>
+                  </div>
+                <div class="form-group">
+                  <label for="phone">Số điện thoại:</label>
+                  <input type="text" class="form-control" placeholder="Nhập số điện thoại"  name="phone1" th:value="${userInfo.phone}" disabled>
+                </div>
+                  <div class="form-group">
+                    <label for="identity">Số CCCD/CMND:</label>
+                    <input type="text" class="form-control" placeholder="Nhập CCCD/CMND"  name="identity1" th:value="${userInfo.identity}" disabled>
+                  </div>
+
+				<div>
+                <p style="color:blue;font-weight:bold;">Đối với email và số điện thoại khi muốn thay đổi, vui lòng liên hệ quản trị viên thông qua: <span style="color:red;">0145698732 </span> </p>
+              </div>
+                <button type="button" class="btn submit-btn" data-toggle="modal" data-target="#edit_modal">Sửa</button>
+              </form>
+              
+        </div>
+
+       
+    </div>
+
+</div>
+    <div class="modal" id="edit_modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Sửa thông tin</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form th:action="@{/edit_info}" method="post">
+              <div class="form-group">
+                <label for="username">Tài khoản:</label>
+                <input type="text" class="form-control" placeholder="Nhập tài khoản" name="username"
+                  th:value="${userInfo.username}" disabled>
+              </div>
+              <div class="form-group">
+                <label for="fullName">Họ và tên:</label>
+                <input type="text" class="form-control" placeholder="Nhập họ và tên của bạn" name="fullName" id="fullName" th:value="${userInfo.fullName}">
+              </div>
+              <div class="form-group">
+                <label for="date">Ngày tháng năm sinh :</label>
+                <input type="date" class="form-control" name="birthday" id="birthday" th:value="${userInfo.birthday}">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" placeholder="Nhập email" name="email"  id="email" th:value="${userInfo.email}" disabled>
+              </div>
+              <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" class="form-control" placeholder="Nhập địa chỉ " name="address" id="address" th:value="${userInfo.address}">
+              </div>
+              <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone"  id="phone" th:value="${userInfo.phone}" disabled>
+              </div>
+              <div class="form-group">
+                <label for="identity">Số CCCD/CMND:</label>
+                <input type="text" class="form-control" placeholder="Nhập CCCD/CMND" name="identity"  id="identity" th:value="${userInfo.identity}">
+              </div>
+              <div>
+                <p id="err-msg"></p>
+              </div>
+               
+              <button type="submit" class="btn btn-success">Xác nhận</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal" >Đóng</button>
+            </form>
+             
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+ 
+<footer class="footer">
+    <h4>© Bản quyền thuộc về nhóm Nguyen22</h4>
+</footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

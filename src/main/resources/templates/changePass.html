@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+    <title>Trang đổi mật khẩu</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm nav_bar_content">
+    <div class="content_logo">
+      <a id="logo_nav" th:href="@{/}"><img src="./assets/img/Logo.png"></a>
+        <h4><a th:href="@{/}">Trang chủ</a></h4>
+    </div>
+    <ul class="navbar-nav">
+				<li class="nav-item">
+					<div class="nav-link mt-1">
+						<h5 th:text="${nameOfUser}"></h5>
+					</div>
+
+				</li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/logout}">
+						<h4>Đăng Xuất</h4>
+				</a></li>
+			</ul>
+</nav>
+    <div class="container-fluid">
+        <div class="container">
+        
+            <div class="form_changePass ">
+                <h3 class="title_container">Thay đổi mật khẩu</h3>
+                <form th:action="@{/do_changePass}"  method="post" onsubmit="handleSubmit();">
+                    <div class="form-group" >
+                      <label for="old_pass">Mật khẩu cũ:</label>
+                      <input type="password"  class="form-control old_pass" name="old_pass" placeholder="Nhập tài khoản" id="old_pass">
+                    </div>
+                    <div class="form-group">
+                      <label for="new_pass">Mật khẩu mới:</label>
+                      <input type="password"  class="form-control new_pass" name="new_pass" placeholder="Nhập mật khẩu" id="new_pass" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conf_new_pass">Xác nhận mật khẩu mới:</label>
+                        <input type="password"  class="form-control conf_new_pass" name="conf_new_pass" placeholder="Nhập mật khẩu" id="conf_new_pass" >
+                      </div>
+                    <div class="form-group">
+                      <p id="err-msg">[[${err_msg}]]</p>
+                    </div>
+                    <button type="submit" class="w-100 btn submit-btn">Xác nhận</button>
+                	
+                  </form>
+                  
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <h4>© Bản quyền thuộc về nhóm Nguyen22</h4>
+    </footer>
+    
+</body>
+<script src="./assets/js/changePass.js"></script>
+</html>
+
+<!-- th:href="@{/}"
+th:href="@{/}" -->

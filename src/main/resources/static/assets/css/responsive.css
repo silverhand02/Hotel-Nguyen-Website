@@ -1,0 +1,201 @@
+@media(max-width:720px){
+
+    .row,
+    .card1{
+        margin: 0;
+    }
+    .fa,
+    .content_container_register,
+    .svg_content_head,
+    .list_contact,
+    .general_review,
+    .footer_list,
+    .nav-links,
+    .details .container,
+    .dp_block
+    {
+        display: block;
+    }
+
+    .dp_block{
+        text-align: center;
+    }
+    .content_logo h4{
+        display:none;
+    }
+
+    .img_content{
+       margin-bottom:24px; 
+    }
+
+    .form_content,
+    .img_content{
+        width: 90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .footer{
+        margin-top:20%;
+    }
+
+    .footer h4{
+        font-size: 20px;
+    }
+
+    .footer::before{
+        top: -50%;
+    }
+     
+    .nav-link h4{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background-color: #7de487be;
+        height: 100vh;
+        width: 400px;
+        top: 0;
+        right: -400px;
+        text-align: left;
+        z-index: 99;
+        transition: 1s;
+    }
+    nav .fa{
+        display:block;
+        color: #fff;
+        font-size: 24px;
+        cursor:pointer;
+        margin: 10px;
+    }
+
+    .nav-links ul{
+        padding:30px;
+    }
+
+    .form_content_register{
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .svg_content{
+        width: 80%;
+        text-align:center;
+        display:none;
+    }
+
+
+    
+
+    svg{
+        width: 90%;
+    }
+
+    .submit-btn{
+        width: 100%;
+    }
+
+    .about_content_img,
+    .overlay,
+    .about_title::after,
+    .indicator,
+    .contact_title::after,
+    .review_title::after,
+    .customer_experienced_text::after,
+    .customer_experienced_content::after,
+    .svg_detail_content,
+    hr
+    {
+        display: none;
+    }
+
+    
+
+    .contact_media{
+        padding-left: 24px;
+    }
+
+    ul{
+        margin-bottom: 0;
+    }
+
+    .type_room_item{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        flex-wrap: nowrap;
+    }
+
+    .card1,
+    .detail_description,
+    .detail_price{
+        max-width: unset;
+    }
+
+    .about_title h1{
+        text-align: center;
+    }
+    .about_content_text,
+    .customer_experienced,
+    .review_introduction {
+        width: unset;
+    }
+
+    .review_introduction{
+        padding-top: 24px;
+    }
+
+    .star_list,
+    .star_list_detail{
+        display: flex;
+    }
+    .footer_list{
+        text-align: center;
+
+    }
+
+    .details .container{
+        flex-wrap: nowrap;
+        justify-content: unset;
+        flex-direction: unset;
+    }
+    .form_detail{
+        width: 100%;
+    }
+    .about_room{
+        padding-bottom: 24px;
+    }
+
+    .info ul{
+        padding-left: 12px;
+        font-size: 20px;
+    }
+
+    
+    .card1{
+        margin-bottom: 12px;
+    }
+
+    .name_room{
+        padding-left: 12px;
+    }
+    .name_room img{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .other_rooms h3{
+        padding-left: 12px;
+    }
+
+    .end h2{
+        font-size: 24px;
+    }
+}
+

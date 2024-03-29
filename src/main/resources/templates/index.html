@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Trang chủ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="./assets/css/styleIndex.css"> -->
+<link rel="stylesheet" type="text/css"
+	href="https://fonts.googleapis.com/css?family=Oswald:400,700%7cPoppins:300,400,400i,600,600i,700,800,900">
+<link
+	href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/7b78e77d77.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" th:href="@{~/assets/css/style.css}">
+<link rel="stylesheet" th:href="@{~/assets/css/responsive.css}">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm nav_bar_content">
+		<div class="content_logo">
+			<a id="logo_nav" th:href="@{~/}"><img src="./assets/img/Logo.png"></a>
+			<h4>
+				<a th:href="@{~/}">Trang chủ</a>
+			</h4>
+		</div>
+
+
+
+		<div id="nav-links" class="nav-links">
+			<i class="fa fa-times hide_icon" onclick="hideMenu()"></i>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#about">
+						<h4>Giới thiệu</h4>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">
+						<h4>Liên lạc</h4>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#review">
+						<h4>Đánh giá</h4>
+					</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{~/login}">
+						<h4>Đăng nhập</h4>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{~/register}">
+						<h4>Đăng ký</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<i class="fa fa-bars hide_icon" onclick="showMenu()"></i>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="img_content img_content_index">
+			<section class="img_slider">
+
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ul class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ul>
+					<div class="carousel-inner no_border">
+						<div class="carousel-item active">
+							<div class="img img_index">
+								<img th:src="@{~/assets/img/img1.jpg}" width="100%">
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="img img_index">
+								<img th:src="@{~/assets/img/img2.jpg}" width="100%">
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="img img_index">
+								<img th:src="@{~/assets/img/img3.jpg}" width="100%">
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="img img_index">
+								<img th:src="@{~/assets/img/login_sample_img.jpg}" width="100%">
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel"
+						data-slide="prev"> <span class="carousel-control-prev-icon"></span>
+					</a> <a class="carousel-control-next" href="#myCarousel"
+						data-slide="next"> <span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</section>
+		</div>
+		<div class="text-center overlay">
+			<h2 class="greeting">Chào mừng quý khách đến với khách sạn
+				Nguyen</h2>
+			<p class="greeting_content mb-3">--Khách sạn đạt chuẩn 5 sao--</p>
+		</div>
+
+	</div>
+
+	<div class="container-fluid type_room">
+		<div class="container container_custom">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+
+				<div class="text-center content_container">
+					<h1>Các loại phòng</h1>
+					<p>Dưới đây là một số loại phòng của khách sạn chúng tôi, quý
+						khách có thể tham khảo để lựa chọn phù hợp với nhu cầu</p>
+				</div>
+				<div class="dropdown mb-2">
+					<button class="btn btn-primary dropdown-toggle" type="button"
+						data-toggle="dropdown">
+						Lọc theo loại phòng <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="item"><a th:href="@{'~/'}">Tất cả các phòng</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'phongtrong'}">Phòng còn trống</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'phong2nguoi'}">Phòng 2 người</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'phong4nguoi'}">Phòng 4 người</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'phongvip'}">Phòng VIP</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'below100k'}">Phòng dưới 100 000 VNĐ</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'between101kand300k'}">Phòng từ 101 000 - 300 000 VNĐ</a></li>
+						<li class="item"><a th:href="@{'~/filter/'+'between301kand400k'}">Phòng từ 301 000 - 400 000 VNĐ</a></li>
+					</ul>
+				</div>
+
+
+				<ul class="carousel-indicators indicator">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<li data-target="#demo" data-slide-to="1"></li>
+				</ul>
+				
+				<div class="carousel-inner padding_custom">
+					<div class="carousel-item active slider_img">
+					<img th:src="@{~/assets/img/img_slider.jpg}" alt="Card image" style="width:100%;height:100%;">
+					</div>
+						<div class="carousel-item" th:each="rooms : ${listRoomsBySix}">
+						<div class="row type_room_item">
+							<div class="col-sm-12 col-sm-6 col-md-4 card no_padding card1 filterDiv" th:each="room : ${rooms}" th:classappend="${room.room_type}">
+								<img class="card-img-top" th:src="@{${'~/assets/img/' + room.path}}" alt="Card image" style="width:100%">
+								<div class="card-body">
+									<h2 class="card-title" th:text="${room.room_type} + ' - ' + ${room.roomnumber}"></h2>
+									<h5 class="card-text content_card" th:text="${room.description}"></h5>
+									<div th:if="${room.status_id==0}">
+   											Tình trạng: <h5 class="card-text content_card">Còn phòng</h5>
+										</div>
+										
+										<div th:if="${room.status_id==1}">
+   											Tình trạng: <h5 class="card-text content_card">Hết phòng</h5>
+										</div>
+										
+									<h5 class="card-text price_card"
+										th:text="'Giá phòng: ' + ${room.price}/1000 + ' 000 VNĐ'"
+										style="text-align: left"></h5>
+									<a th:href="@{'/detail/' + ${room.room_id}}" class="btn btn-success detail_btn">Xem chi tiết</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<a class="carousel-control-prev custom_symbol_prev" href="#demo"
+					data-slide="prev"> <span class="carousel-control-prev-icon"></span>
+				</a> <a class="carousel-control-next custom_symbol_next" href="#demo"
+					data-slide="next"> <span class="carousel-control-next-icon"></span>
+				</a>
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="container-fluid about" id="about">
+		<div class="container">
+			<div class="about_title">
+				<h1>Giới thiệu</h1>
+			</div>
+			<div class="about_content">
+				<div class="about_content_text">
+					<p>
+						Khách sạn Nguyen được xây dựng vào những năm 90. Ban đầu khách sạn
+						chỉ là nhà khách bình dân. Sau 10 năm kể từ khi thành lập, khách
+						sạn đã có những bước tiến đáng kể. Dần dần từ một nhà khách bình
+						dân đã biến thành khách sạn 5 sao bậc nhất thành phố với đầy đủ
+						các tiện nghi và các loại phòng khác nhau nhằm đáp ứng các nhu cầu
+						khác nhau của khách hàng. <br>Vào năm 20xx, khách sạn Nguyen
+						được vinh dự đón tiếp nguyên thủ quốc gia của nước X tại phòng
+						president. <br>Vào năm 201x, khách sạn vinh dự được trao tặng
+						giải thưởng doanh nghiệp có nhiều cống hiến nhất năm
+					</p>
+				</div>
+
+				<div class="about_content_img">
+					<img class="about_img" th:src="@{~/assets/img/img1.jpg}"> <img
+						class="about_img" th:src="@{~/assets/img/img2.jpg}"> <img
+						class="about_img" th:src="@{~/assets/img/img3.jpg}"> <img
+						class="about_img" th:src="@{~/assets/img/room4.jpg}"> <img
+						class="about_img" th:src="@{~/assets/img/room7.jpg}">
+				</div>
+
+			</div>
+			<Button class="read_more_btn">Đọc thêm</Button>
+		</div>
+	</div>
+
+
+	<div class="container-fluid contact" id="contact">
+		<div class="container">
+			<div class="contact_title">
+				<h1>Thông tin liên lạc</h1>
+			</div>
+			<div class="contact_content">
+				<p>Có thể liên lạc với chúng tôi thông qua</p>
+
+				<div class="list_contact">
+					<ul class="contact_social_media">
+						<li><i class="fa fa-facebook"></i> www.facebook.com/ksNguyen
+						</li>
+						<li><i class="fa fa-envelope"></i> ksNguyen@gmail.com</li>
+					</ul>
+					<ul class="contact_media">
+						<li><i class="fa fa-phone-volume"></i> 0147258369</li>
+						<li><i class="fa fa-map-pin"></i> 12, đường X phường Y quận
+							Z, Tp.H</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="container-fluid review" id="review">
+		<div class="container review_after">
+			<div class="review_title">
+				<h1>Đánh giá của khách hàng</h1>
+			</div>
+			<div class="general_review">
+				<div class="customer_experienced">
+					<div class="img_customer">
+						<img th:src="@{~/assets/img/avatar.jpg}">
+					</div>
+					<div class="customer_experienced_content">
+						<div class="customer_experienced_text">
+							<p>Tôi có cảm giác đây là một nơi tuyệt vời để ở và tận hưởng
+								kì nghỉ nơi đây. Đề xuất cho mọi người hãy đến với khách sạn
+								Nguyen</p>
+							<div class="signiture_customer">
+								<h4>Anh X, TP.X</h4>
+								<div class="star_list">
+									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fa fa-star"></i>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="review_introduction">
+					<p>Sau đây chính là cảm nhận của khách hàng sau khi tới khách
+						sạn và sử dụng những dịch vụ mà khách sạn cung cấp. Những lời đánh
+						giá, nhận xét dưới đây đều dựa trên tinh thần tự nguyện của khách
+						hàng. Mọi người có thể để lại các góp ý để khách sạn có thể cải
+						thiện trong tương lai. Mỗi ý kiến của quý khách là một động lực to
+						lớn để khách sạn sửa đổi và ngày một phát triển hơn. Xin chân
+						thành cảm ơn quý khách</p>
+					<div class="button">
+						<button class="more_review">Xem thêm đánh giá khác</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+
+	<div class="container-fluid footer_homepage" id="footer_homepage">
+		<div class="container">
+			<div class="footer_list">
+				<div class="logo_img">
+					<img th:src="@{~/assets/img/Logo.png}">
+				</div>
+				<ul class="footer_list_item">
+					<li>Điều khoản</li>
+					<li>Giúp đỡ</li>
+					<li>Chính sách bảo mật</li>
+				</ul>
+				<ul class="footer_list_item">
+					<li>Giới thiệu</li>
+					<li>Liên lạc</li>
+				</ul>
+				<ul class="footer_list_item">
+					<li>FAQ</li>
+					<li>Tin tức</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<h3>© Bản quyền thuộc về nhóm Nguyen22</h3>
+	</div>
+
+
+	<script th:src="@{~/assets/js/main.js}"></script>
+	<script>
+		AOS.init();
+	</script>
+
+</body>
+
+</html>
