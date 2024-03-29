@@ -11,13 +11,18 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 - [Contributors](#contributors)
 
 ## Features
-- Browse furniture items by category
-- Search for specific items
-- View details of each furniture item
-- Add items to cart
-- Checkout functionality
-- User authentication and authorization
-- Admin dashboard for managing products and orders
+- Login
+- Sign up
+- Log out
+- Forgot password
+- Search for available rooms
+- Book rooms and services
+- Manage booking orders and services
+- Payment
+- View booking order status
+- Account management
+- Booking order management
+- Room and service management
 
 ## Technologies Used
 - Java
@@ -32,8 +37,10 @@ This is a project for creating a Furniture Store Website. The website aims to pr
 ![Demo](52000579_DuongDucNguyen.mp4)
 
 ## Contributors
-- Duong Duc Nguyen - Full Stacks Developer - https://github.com/silverhand02
-- Tran Quang Minh - Full Stacks Developer
-- Nguyen Gia Nguyen - Full Stacks Developer
+- Duong Duc Nguyen - Back-end Developer - https://github.com/silverhand02
+- Tran Truong Gia Phat - Full Stacks Developer
+- Nguyen Gia Nguyen - Back-end Developer
+- Nguyen Khac Van - Front-end Developer
+- Nguyen Tien Huy - Front-end Developer
 
 
